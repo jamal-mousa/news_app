@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/widgets/category_card.dart';
+import 'package:news_app/widgets/category_list_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -39,30 +41,7 @@ class HomeView extends StatelessWidget {
         
         
       ),
-      body: Container
-      (
-        height: 150,
-        width: 200,
-        decoration: BoxDecoration
-        (
-          image: DecorationImage
-          (
-            image: NetworkImage('https://images.pexels.com/photos/209977/pexels-photo-209977.jpeg'),
-            fit: BoxFit.fill
-          ),
-          borderRadius: BorderRadius.circular(16),
-          color: Colors.blue,
-        ),
-        child: Center(child: Text('Sports' , 
-        style: TextStyle
-        (
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontSize: 28
-        ),
-        ),
-        ),
-      ),
+      body: CategoryListView()
     );
   }
 }
