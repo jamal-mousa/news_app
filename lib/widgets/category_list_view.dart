@@ -10,7 +10,7 @@ class CategoryListView extends StatelessWidget {
     CategoryModel(name: 'health',     image: 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg'),
     CategoryModel(name: 'Science',    image: 'https://images.pexels.com/photos/9243553/pexels-photo-9243553.jpeg'),
     CategoryModel(name: 'Technology', image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg'),
-    CategoryModel(name: 'General', image: 'https://images.pexels.com/photos/623843/pexels-photo-623843.jpeg'),
+    CategoryModel(name: 'General',    image: 'https://images.pexels.com/photos/623843/pexels-photo-623843.jpeg'),
   ];
   @override
   Widget build(BuildContext context) {
