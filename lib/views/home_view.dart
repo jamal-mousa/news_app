@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/widgets/category_list_view.dart';
 import 'package:news_app/widgets/news_list_view.dart';
 // import 'package:news_app/widgets/category_list_view.dart';
-import 'package:news_app/widgets/news_tile.dart';
+// import 'package:news_app/widgets/news_tile.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -42,7 +43,18 @@ class HomeView extends StatelessWidget {
         
         
       ),
-      body: NewsListView(),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column
+        (
+          children: 
+          [
+            CategoryListView(),
+            SizedBox(height: 16,),
+            Expanded(child: NewsListView())
+          ],
+        ),
+      ),
     );
   }
 }
