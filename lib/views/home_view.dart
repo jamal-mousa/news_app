@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/widgets/category_list_view.dart';
 import 'package:news_app/widgets/news_list_view.dart';
+// import 'package:news_app/widgets/news_list_view.dart';
 // import 'package:news_app/widgets/category_list_view.dart';
 // import 'package:news_app/widgets/news_tile.dart';
 
@@ -45,13 +46,15 @@ class HomeView extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Column
+        child: CustomScrollView
         (
-          children: 
+          slivers: 
           [
-            CategoryListView(),
-            SizedBox(height: 16,),
-            Expanded(child: NewsListView())
+            SliverToBoxAdapter(child: CategoryListView(),),
+            SliverToBoxAdapter(child: SizedBox(height: 32,)),
+            SliverToBoxAdapter(child: NewsListView(),),
+
+
           ],
         ),
       ),
