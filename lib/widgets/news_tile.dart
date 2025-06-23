@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/models/article_model.dart';
 
 class NewsTile extends StatelessWidget {
-  const NewsTile({super.key});
+  const NewsTile({super.key, required this.articleModel});
+  final ArticleModel articleModel;
+
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,7 @@ class NewsTile extends StatelessWidget {
         (
           borderRadius: BorderRadius.circular(6),
           child: Image.network
-          ('https://images.pexels.com/photos/209977/pexels-photo-209977.jpeg',
+          (articleModel.image?? 'https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg',
             width: double.infinity,
             height: 200,
             fit: BoxFit.cover,
@@ -25,7 +28,7 @@ class NewsTile extends StatelessWidget {
           height: 15,
         ),
         Text(
-          'dsxghchcghxfxxxy yutydtddyuuoy ftddtfyufidd  ftddfhuffodrrd fo7d57d5dyfsxr dsxghchcghxfxxxy yutydtddyuuoy ftddtfyufidd  ftddfhuffodrrd fo7d57d5dyfsxr' ,
+          articleModel.title!,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style: TextStyle(color: Colors.black, fontSize: 20,),
@@ -36,7 +39,7 @@ class NewsTile extends StatelessWidget {
           height: 15,
         ),
         Text(
-          'dsxghchcghxfxxxy yutydtddyuuoy ftddtfyufidd  ftddfhuffodrrd fo7d57d5dyfsxr dsxghchcghxfxxxy yutydtddyuuoy ftddtfyufidd  ftddfhuffodrrd fo7d57d5dyfsxr' ,
+          articleModel.subTitle?? '',
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style: TextStyle(color: Colors.grey, fontSize: 14,),
