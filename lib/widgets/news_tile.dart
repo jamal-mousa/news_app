@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
 
+// package
+// cashed network image
+
 class NewsTile extends StatelessWidget {
   const NewsTile({super.key, required this.articleModel});
   final ArticleModel articleModel;
