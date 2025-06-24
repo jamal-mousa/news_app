@@ -35,7 +35,7 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
     (
       height: MediaQuery.of(context).size.height,
       child: Center(child: CircularProgressIndicator())))
-    :
-    NewsListView(articles: articles);
+    :articles.isNotEmpty? NewsListView(articles: articles)
+    :SliverToBoxAdapter(child: Text('oops , there was an error , try later'),);
   }
 }
